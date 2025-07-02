@@ -6,16 +6,16 @@ Attempting to bind to HOST environment variable: 0.0.0.0
 If this was unintentional, check that you haven't mistakenly set it in your shell.
 Learn more here: https://cra.link/advanced-config
 
-(node:32416) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:35405) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-(node:32416) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:35405) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
 
 <--- Last few GCs --->
 
-[32416:0xc36ccb0]    97881 ms: Mark-sweep 4008.5 (4128.7) -> 4006.8 (4128.7) MB, 3754.5 / 0.0 ms  (average mu = 0.370, current mu = 0.048) allocation failure; scavenge might not succeed
-[32416:0xc36ccb0]   103701 ms: Mark-sweep 4022.5 (4128.7) -> 4022.5 (4158.4) MB, 5803.8 / 0.0 ms  (average mu = 0.172, current mu = 0.003) allocation failure; scavenge might not succeed
+[35405:0x9694cb0]    70497 ms: Mark-sweep 4037.5 (4134.7) -> 4037.5 (4134.7) MB, 3216.1 / 0.0 ms  (average mu = 0.466, current mu = 0.031) allocation failure; scavenge might not succeed
+[35405:0x9694cb0]    74766 ms: Mark-sweep 4053.2 (4134.7) -> 4053.2 (4166.7) MB, 4254.8 / 0.0 ms  (average mu = 0.252, current mu = 0.003) allocation failure; scavenge might not succeed
 
 
 <--- JS stacktrace --->
