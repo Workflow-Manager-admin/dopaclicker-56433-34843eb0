@@ -177,18 +177,53 @@ function CenterClicker({ stimulus, dps, click, upgrades, onButtonFlash, buttonCl
   );
 }
 
+/**
+ * Dopamine Tooltip UI — re-usable, follows dopamine design spec & design note
+ * @param {object} props
+ * @param {boolean} props.visible - show/hide state
+ * @param {string} props.title - tooltip main title
+ * @param {string} props.desc - tooltip sub-descirption
+ */
+function DopamineTooltip({ visible, title, desc }) {
+  return (
+    <div className={`dopamine-tooltip${visible ? " visible" : ""}`} role="tooltip" aria-live="polite">
+      <span className="dopamine-tooltip-title">{title}</span>
+      <span className="dopamine-tooltip-subline">{desc}</span>
+    </div>
+  );
+}
+
 // PUBLIC_INTERFACE
 function UpgradesRow({ upgradesDef, unlockLevels, hasUnseen, onUpgradeClick }) {
   // Renders the 5 small upgrade icons/boxes in a row (show if unlocked)
+  // Local state for tooltip UI
+  const [hoveredIndex, setHoveredIndex] = React.useState(null);
+
   return (
     <section className="dopamine-upgrades-row" role="toolbar" aria-label="Upgrades">
       {upgradesDef.map((u, idx) =>
         unlockLevels[u.key] > 0 ? (
-          <div key={u.key} className="dopamine-upgrade-box" tabIndex={0} aria-label={u.name} onClick={() => onUpgradeClick(u)}>
+          <div
+            key={u.key}
+            className="dopamine-upgrade-box"
+            tabIndex={0}
+            aria-label={u.name}
+            onClick={() => onUpgradeClick(u)}
+            style={{ position: "relative" }}
+            onMouseEnter={() => setHoveredIndex(idx)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            onFocus={() => setHoveredIndex(idx)}
+            onBlur={() => setHoveredIndex(null)}
+          >
             <span className="dopamine-upgrade-icon">{u.icon}</span>
             {hasUnseen[u.key] && (
               <span className="dopamine-upgrade-badge" title="New upgrade"></span>
             )}
+            <DopamineTooltip
+              visible={hoveredIndex === idx}
+              title={u.name}
+              desc={u.desc}
+            />
           </div>
         ) : null
       )}
@@ -196,15 +231,27 @@ function UpgradesRow({ upgradesDef, unlockLevels, hasUnseen, onUpgradeClick }) {
   );
 }
 
-// PUBLIC_INTERFACE
+/**
+ * Dopamine Modular Upgrades Card Column with tooltip logic
+ */
 function ModularUpgradesCardCol({ upgradesDef, unlockLevels, playerPoints, onBuy, buyErrors, newlyUnlocked }) {
-  // Modular upgrades column list - for buying/upgrading, with animation if new
+  // Tooltip: show on hover/focus per upgrade card
+  const [hoveredIdx, setHoveredIdx] = React.useState(null);
+
   return (
     <section className="dopamine-upgrades-cards-col" style={{ marginBottom: 22 }}>
       {upgradesDef.map((u, i) =>
         unlockLevels[u.key] > 0 ? (
-          <div key={u.key}
-            className={`dopamine-mod-upgrade-card${newlyUnlocked === u.key ? " dopamine-upgrade-card-shake" : ""}${(unlockLevels[u.key] && unlockLevels[u.key] >= 5) ? " dopamine-upgrade-card-maxed" : ""}`}>
+          <div
+            key={u.key}
+            className={`dopamine-mod-upgrade-card${newlyUnlocked === u.key ? " dopamine-upgrade-card-shake" : ""}${(unlockLevels[u.key] && unlockLevels[u.key] >= 5) ? " dopamine-upgrade-card-maxed" : ""}`}
+            style={{ position: "relative" }}
+            onMouseEnter={() => setHoveredIdx(i)}
+            onMouseLeave={() => setHoveredIdx(null)}
+            onFocus={() => setHoveredIdx(i)}
+            onBlur={() => setHoveredIdx(null)}
+            tabIndex={0}
+          >
             <div className="dopamine-mod-upgrade-header">
               <span className="dopamine-upgrade-icon">{u.icon}</span>
               <span className="dopamine-mod-upgrade-title">{u.name}</span>
@@ -222,6 +269,11 @@ function ModularUpgradesCardCol({ upgradesDef, unlockLevels, playerPoints, onBuy
               {unlockLevels[u.key] >= 5 ? "Maxed" : "Buy"}
             </button>
             <div className="dopamine-buy-err">{buyErrors[u.key] || ""}</div>
+            <DopamineTooltip
+              visible={hoveredIdx === i}
+              title={u.name}
+              desc={u.desc}
+            />
           </div>
         ) : null)}
     </section>

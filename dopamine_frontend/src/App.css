@@ -1082,6 +1082,64 @@ body,
   cursor: not-allowed;
 }
 
+/* ---- Dopamine Tooltip UI ---- */
+:root {
+  --tooltip-bg: #FFF;
+  --tooltip-border: #ECECEC;
+  --tooltip-radius: 16px;
+  --tooltip-shadow: 0 6px 48px rgba(24,30,55,0.15);
+  --tooltip-title: #181E37;
+  --tooltip-subtext: #6E7381;
+  --tooltip-padding-y: 16px;
+  --tooltip-padding-x: 20px;
+  --tooltip-font: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.dopamine-tooltip {
+  background: var(--tooltip-bg);
+  border: 1px solid var(--tooltip-border);
+  border-radius: var(--tooltip-radius);
+  box-shadow: var(--tooltip-shadow);
+  color: var(--tooltip-title);
+  font-family: var(--tooltip-font);
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  max-width: 320px;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.12s cubic-bezier(.4,0,.2,1), visibility 0.12s cubic-bezier(.4,0,.2,1);
+  z-index: 1000;
+  margin-top: 12px;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dopamine-tooltip.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dopamine-tooltip-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--tooltip-title);
+  margin-bottom: 2px;
+  line-height: 1.33;
+}
+
+.dopamine-tooltip-subline {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--tooltip-subtext);
+  line-height: 1.5;
+}
+
 /* Achievement toast popup overrides */
 .dopamine-upgrade-card-succ {
   background: #fffde8 !important;
