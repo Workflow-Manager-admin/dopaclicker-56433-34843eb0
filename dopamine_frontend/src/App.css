@@ -18,6 +18,49 @@ body,
   color: var(--brand-black);
 }
 
+/* Hide everything but main area for minimalist opening: */
+.dopamine-simple-root.minimalist-mode .dopamine-statusbar,
+.dopamine-simple-root.minimalist-mode .dopamine-upgrades-cards-col,
+.dopamine-simple-root.minimalist-mode .dvd-bounce-area,
+.dopamine-simple-root.minimalist-mode .dopamine-preloader {
+  display: none !important;
+}
+
+.dopamine-simple-root.minimalist-mode .dopamine-center-main.only-button-main {
+  min-height: 340px;
+  box-shadow: none;
+  padding-top: 56px;
+  padding-bottom: 44px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+/* Fade-in button animation */
+.fade-in-btn {
+  opacity: 0;
+}
+
+.fade-in-btn.visible {
+  opacity: 1;
+  transition: opacity 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Hide stats initially, fade in when needed */
+.dopamine-stats-stack {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  margin-top: -6px;
+  transition: opacity 0.26s, height 0.3s, margin-top 0.2s;
+}
+.dopamine-stats-stack.stats-visible {
+  opacity: 1;
+  pointer-events: auto;
+  height: auto;
+  margin-top: 0;
+  transition: opacity 0.56s cubic-bezier(.27,.97,.45,1.01), height 0.25s, margin-top 0.16s;
+}
+
 /* Top status bar */
 .dopamine-statusbar {
   width: 100vw;
