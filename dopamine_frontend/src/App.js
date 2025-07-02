@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
+import Tooltip from "./Tooltip";
 
 /**
  * MASTER DOPAMINE CLICKER GAME UI
@@ -177,22 +178,6 @@ function CenterClicker({ stimulus, dps, click, upgrades, onButtonFlash, buttonCl
   );
 }
 
-/**
- * Dopamine Tooltip UI — re-usable, follows dopamine design spec & design note
- * @param {object} props
- * @param {boolean} props.visible - show/hide state
- * @param {string} props.title - tooltip main title
- * @param {string} props.desc - tooltip sub-descirption
- */
-function DopamineTooltip({ visible, title, desc }) {
-  return (
-    <div className={`dopamine-tooltip${visible ? " visible" : ""}`} role="tooltip" aria-live="polite">
-      <span className="dopamine-tooltip-title">{title}</span>
-      <span className="dopamine-tooltip-subline">{desc}</span>
-    </div>
-  );
-}
-
 // PUBLIC_INTERFACE
 function UpgradesRow({ upgradesDef, unlockLevels, hasUnseen, onUpgradeClick }) {
   // Renders the 5 small upgrade icons/boxes in a row (show if unlocked)
@@ -219,7 +204,7 @@ function UpgradesRow({ upgradesDef, unlockLevels, hasUnseen, onUpgradeClick }) {
             {hasUnseen[u.key] && (
               <span className="dopamine-upgrade-badge" title="New upgrade"></span>
             )}
-            <DopamineTooltip
+            <Tooltip
               visible={hoveredIndex === idx}
               title={u.name}
               desc={u.desc}
@@ -269,7 +254,7 @@ function ModularUpgradesCardCol({ upgradesDef, unlockLevels, playerPoints, onBuy
               {unlockLevels[u.key] >= 5 ? "Maxed" : "Buy"}
             </button>
             <div className="dopamine-buy-err">{buyErrors[u.key] || ""}</div>
-            <DopamineTooltip
+            <Tooltip
               visible={hoveredIdx === i}
               title={u.name}
               desc={u.desc}
