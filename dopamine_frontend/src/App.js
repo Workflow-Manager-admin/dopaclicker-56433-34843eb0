@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import Tooltip from "./Tooltip";
+import UpgradesSection from "./UpgradesSection";
 
 /**
  * MASTER DOPAMINE CLICKER GAME UI
@@ -803,21 +804,19 @@ function App() {
             </main>
           ) : (
             <>
+              {/* Main DVD/Clicker area */}
               <DVDZone unlocked={upgrades.visual_zone >= 1} />
-              <CenterClicker
-                stimulus={stimulus}
-                dps={dps}
-                click={handleClick}
-                upgrades={upgrades}
-                buttonClassName={lastPurchased && "dopamine-cta-btn-fancy"}
-              />
-              <StockSimulator unlocked={upgrades.visual_zone >= 1} />
-              <UpgradesRow
-                upgradesDef={coreUpgrades}
+              {/* Dopamine upgrades section as per the new design */}
+              <UpgradesSection
+                stimulation={stimulus}
+                onButtonClick={handleClick}
                 unlockLevels={upgrades}
                 hasUnseen={unseenUpgrades}
                 onUpgradeClick={onUpgradeBoxClick}
+                dps={dps}
               />
+              <StockSimulator unlocked={upgrades.visual_zone >= 1} />
+              {/* Below, the modular upgrade columns/cards for deep gameplay layers */}
               <ModularUpgradesCardCol
                 upgradesDef={coreUpgrades}
                 unlockLevels={upgrades}

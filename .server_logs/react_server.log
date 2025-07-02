@@ -22,3 +22,196 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 webpack compiled successfully
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 4:8:     'UpgradesSection' is defined but never used  no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used   no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 4:8:     'UpgradesSection' is defined but never used  no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used   no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 151:10:  'CenterClicker' is defined but never used   no-unused-vars
+  Line 183:10:  'UpgradesRow' is defined but never used     no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 151:10:  'CenterClicker' is defined but never used   no-unused-vars
+  Line 183:10:  'UpgradesRow' is defined but never used     no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+Syntax error: /home/kavia/workspace/code-generation/dopaclicker-56433-34843eb0/dopamine_frontend/src/App.css At-rule without name (1220711:2)
+  1220709 |   .dopamine-upg-row-flex { gap: 9vw; }
+  1220710 |   .dopamine-upg-circ-container { width: 37px; height: 37px; }
+> 1220711 | }@/* --- Dopamine Upgrades Section Custom Layout --- */
+          |  ^
+  1220712 | .dopamine-upg-section-root {
+  1220713 |   display: flex;
+WARNING in [eslint] 
+src/App.js
+  Line 151:10:  'CenterClicker' is defined but never used   no-unused-vars
+  Line 183:10:  'UpgradesRow' is defined but never used     no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/App.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/App.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+SyntaxError
+
+(1220711:2) /home/kavia/workspace/code-generation/dopaclicker-56433-34843eb0/dopamine_frontend/src/App.css At-rule without name
+
+  1220709 |   .dopamine-upg-row-flex { gap: 9vw; }
+  1220710 |   .dopamine-upg-circ-container { width: 37px; height: 37px; }
+> 1220711 | }@/* --- Dopamine Upgrades Section Custom Layout --- */
+          |  ^
+  1220712 | .dopamine-upg-section-root {
+  1220713 |   display: flex;
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+Syntax error: /home/kavia/workspace/code-generation/dopaclicker-56433-34843eb0/dopamine_frontend/src/App.css At-rule without name (1220711:2)
+  1220709 |   .dopamine-upg-row-flex { gap: 9vw; }
+  1220710 |   .dopamine-upg-circ-container { width: 37px; height: 37px; }
+> 1220711 | }@/* --- Dopamine Upgrades Section Custom Layout --- */
+          |  ^
+  1220712 | .dopamine-upg-section-root {
+  1220713 |   display: flex;
+WARNING in [eslint] 
+src/App.js
+  Line 151:10:  'CenterClicker' is defined but never used   no-unused-vars
+  Line 183:10:  'UpgradesRow' is defined but never used     no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/App.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/App.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+SyntaxError
+
+(1220711:2) /home/kavia/workspace/code-generation/dopaclicker-56433-34843eb0/dopamine_frontend/src/App.css At-rule without name
+
+  1220709 |   .dopamine-upg-row-flex { gap: 9vw; }
+  1220710 |   .dopamine-upg-circ-container { width: 37px; height: 37px; }
+> 1220711 | }@/* --- Dopamine Upgrades Section Custom Layout --- */
+          |  ^
+  1220712 | .dopamine-upg-section-root {
+  1220713 |   display: flex;
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/App.js
+  Line 151:10:  'CenterClicker' is defined but never used   no-unused-vars
+  Line 183:10:  'UpgradesRow' is defined but never used     no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used  no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/App.js
+  Line 151:10:  'CenterClicker' is defined but never used   no-unused-vars
+  Line 183:10:  'UpgradesRow' is defined but never used     no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used  no-unused-vars
+
+webpack compiled with 1 warning
+Compiling...
+Failed to compile.
+
+Syntax error: /home/kavia/workspace/code-generation/dopaclicker-56433-34843eb0/dopamine_frontend/src/App.css At-rule without name (1248757:1)
+  1248755 |   .dopamine-upg-circ-container { width: 37px; height: 37px; }
+  1248756 | }
+> 1248757 | @/* --- Dopamine Upgrades Section Custom Layout --- */
+          | ^
+  1248758 | .dopamine-upg-section-root {
+  1248759 |   display: flex;
+WARNING in [eslint] 
+src/App.js
+  Line 151:10:  'CenterClicker' is defined but never used   no-unused-vars
+  Line 183:10:  'UpgradesRow' is defined but never used     no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/App.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/App.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+SyntaxError
+
+(1248757:1) /home/kavia/workspace/code-generation/dopaclicker-56433-34843eb0/dopamine_frontend/src/App.css At-rule without name
+
+  1248755 |   .dopamine-upg-circ-container { width: 37px; height: 37px; }
+  1248756 | }
+> 1248757 | @/* --- Dopamine Upgrades Section Custom Layout --- */
+          | ^
+  1248758 | .dopamine-upg-section-root {
+  1248759 |   display: flex;
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+Failed to compile.
+
+Syntax error: /home/kavia/workspace/code-generation/dopaclicker-56433-34843eb0/dopamine_frontend/src/App.css Unknown word (99188:3)
+  99186 |   width: 13px;
+  99187 |   height: 13px;
+> 99188 |   backgr
+        |   ^
+WARNING in [eslint] 
+src/App.js
+  Line 151:10:  'CenterClicker' is defined but never used   no-unused-vars
+  Line 183:10:  'UpgradesRow' is defined but never used     no-unused-vars
+  Line 687:11:  'stats' is assigned a value but never used  no-unused-vars
+
+ERROR in ./src/App.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/App.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+SyntaxError
+
+(99188:3) /home/kavia/workspace/code-generation/dopaclicker-56433-34843eb0/dopamine_frontend/src/App.css Unknown word
+
+  99186 |   width: 13px;
+  99187 |   height: 13px;
+> 99188 |   backgr
+        |   ^
+
+webpack compiled with 1 error and 1 warning
+Compiling...
+
+<--- Last few GCs --->
+
+[29883:0x2e04fcb0]   272401 ms: Mark-sweep 4000.1 (4129.3) -> 4000.1 (4129.3) MB, 2960.5 / 0.0 ms  (average mu = 0.628, current mu = 0.043) allocation failure; scavenge might not succeed
+[29883:0x2e04fcb0]   276839 ms: Mark-sweep 4015.8 (4129.3) -> 4015.8 (4161.3) MB, 4422.4 / 0.0 ms  (average mu = 0.388, current mu = 0.003) allocation failure; scavenge might not succeed
+
+
+<--- JS stacktrace --->
+
+FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+ 1: 0xb9c1f0 node::Abort() [/usr/bin/node]
+ 2: 0xaa27ee  [/usr/bin/node]
+ 3: 0xd73be0 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/usr/bin/node]
+ 4: 0xd73f87 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/usr/bin/node]
+ 5: 0xf51305  [/usr/bin/node]
+ 6: 0xf637dd v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [/usr/bin/node]
+ 7: 0xf3dece v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/bin/node]
+ 8: 0xf3f297 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [/usr/bin/node]
+ 9: 0xf2049a v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [/usr/bin/node]
+10: 0x12e56cf v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [/usr/bin/node]
+11: 0x1712339  [/usr/bin/node]
