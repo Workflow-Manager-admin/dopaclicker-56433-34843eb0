@@ -113,12 +113,30 @@
   outline: none;
   border: 2px solid #23a6d5;
   cursor: pointer;
-  transition: all 0.18s;
   margin: 0;
+  /* Remove transitions and transforms for constant sizing (for this task) */
+  transition: none !important;
+  min-width: 0;
+  min-height: 0;
+  /* Size/visual only if styled class is present at >=30 clicks */
 }
-.dopamine-btn:active {
-  transform: scale(0.95) rotate(-4deg);
-  box-shadow: 0 6px 16px #58ffaf44;
+
+.dopamine-btn:active,
+.dopamine-btn:focus {
+  /* Remove all animation/scale/transform on click or focus */
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.dopamine-btn--styled {
+  /* Only applies when clicks >= 30. This is the actual styled button state. */
+  border: 2px solid #23a6d5;
+  border-radius: 777px;
+  background: var(--btn);
+  color: #222;
+  font-weight: 900;
+  font-size: 36px;
+  outline: none;
 }
 @keyframes colorCycle {
   0% {filter:hue-rotate(0deg);}

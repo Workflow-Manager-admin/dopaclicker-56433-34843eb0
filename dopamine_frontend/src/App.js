@@ -476,37 +476,62 @@ function App() {
 
 /** --- MODULAR COMPONENTS --- */
 
-// PUBLIC_INTERFACE
+/**
+ * PUBLIC_INTERFACE
+ * DopamineButton: The central click button.
+ * Requirements:
+ * - Default (unstyled) browser button until clicks >= 30, no transforms, no custom CSS or classes applied.
+ * - At clicks >= 30, instantly become a styled/custom button (className 'dopamine-btn', sizing & visual from CSS).
+ * - Button size/shape stays exactly constant on all interaction (no transform/scale on :active/click regardless of state).
+ * - Transition to styled state at 30 clicks is instant.
+ */
 function DopamineButton({ onClick, clicks, unlocks }) {
-  // Animated button based on unlocks
-  const style = {
-    background:
-      unlocks.rainbow
-        ? `linear-gradient(90deg,#ff5252,#b9ff49,#5bdcff,#f1db4b,#ff5252)`
-        : unlocks.visualFx
-        ? "radial-gradient(circle,#ffbeb3,#ff81eb 60%,#fff 100%)"
-        : "#fff",
-    color: unlocks.visualFx ? "#222" : "#1a1a1a",
-    border: unlocks.visualFx ? "3px solid #50c3ec" : "2px solid #23a6d5",
-    boxShadow: unlocks.confetti
-      ? "0 0 30px 6px #f8c419, 0 2px 16px #ff52ae"
-      : "0 2px 10px #aaa",
-    margin: "18px auto",
-    minWidth: "140px",
-    minHeight: "140px",
-    borderRadius: 777,
-    fontWeight: 900,
-    fontSize: 32 + Math.min(8, Math.floor(clicks/37)),
-    transition: "all .22s cubic-bezier(.77,.01,.08,.98)",
-    position: "relative",
-    overflow: "hidden",
-    padding: "26px 38px",
-    cursor: "pointer",
-    animation: unlocks.rainbow ? "colorCycle 1.7s linear infinite" : "",
-    filter: unlocks.confetti ? "hue-rotate(90deg)" : ""
-  };
+  // Pre-30 clicks: raw unstyled button
+  if (clicks < 30) {
+    // No className, no style, constant fixed width/height with basic HTML props only
+    return (
+      <button
+        onClick={onClick}
+        style={{
+          width: 144,
+          height: 144,
+          // Remove border, bg, radius: let browser default
+          display: "block",
+          margin: "18px auto",
+          fontSize: 22,
+          fontWeight: 600,
+          // absolutely NO transition/animation/transform!
+        }}
+        // Do NOT set className at all at this stage
+      >
+        {clicks > 25 ? "Almost there..." : "Stimulate!"}
+      </button>
+    );
+  }
+  // 30 or more clicks: styled/custom button (use CSS class as before, but force NO animation/transform on click)
   return (
-    <button className="dopamine-btn" style={style} onClick={onClick}>
+    <button
+      className="dopamine-btn dopamine-btn--styled"
+      onClick={onClick}
+      style={{
+        width: 144,
+        height: 144,
+        borderRadius: 777,
+        fontWeight: 900,
+        fontSize: 32 + Math.min(8, Math.floor(clicks/37)),
+        margin: "18px auto",
+        // Remove animation/transform/transition from custom style
+        transition: "none",
+        animation: "none",
+        // Fixed
+        minWidth: undefined,
+        minHeight: undefined,
+        maxWidth: undefined,
+        maxHeight: undefined,
+        boxShadow: undefined,
+        filter: undefined
+      }}
+    >
       {unlocks.overload && clicks > 3000000 ? (
         <span>🤡 Nerd 🌪 Overload!</span>
       ) : (
