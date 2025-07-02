@@ -98,11 +98,6 @@ function App() {
         </span>
       </div>
       <div className="dopamine-content-wrapper">
-        {/* Logos — left, vertically stacked, per design */}
-        <div className="dopamine-logo-col">
-          <div className="dopamine-dvd-logo">DVD</div>
-          <div className="dopamine-dvd-logo" style={{ marginTop: 16 }}>DVD</div>
-        </div>
         {/* Main central column: button, stats, upgrades */}
         <main className="dopamine-center-main">
           {!activated ? (

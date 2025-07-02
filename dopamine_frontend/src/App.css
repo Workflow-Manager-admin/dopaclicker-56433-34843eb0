@@ -41,43 +41,16 @@ body,
 /* Main flex horizontal layout */
 .dopamine-content-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: calc(100vh - 44px);
-  max-width: 1100px;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
 }
 
-/* Left logo column */
-.dopamine-logo-col {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-width: 140px;
-  margin-right: 34px;
-  margin-left: 38px;
-  margin-top: 0;
-}
-
-.dopamine-dvd-logo {
-  width: 100px;
-  height: 100px;
-  font-size: 64px;
-  font-weight: 900;
-  letter-spacing: 0.11em;
-  color: #000;
-  background: transparent;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  filter: drop-shadow(0px 2px 6px #fff9);
-  border: none;
-  /* If logo SVG—in image, a faint white halo is present! */
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  user-select: none;
-}
+/* Left logo column and DVD logos removed for a pure centered layout */
 
 /* Main central col */
 .dopamine-center-main {
