@@ -34,6 +34,18 @@ const UPGRADE_DEFS = [
     max: 2,
     effect: (current, count) => current, // Cosmetic only
   },
+  // --- ADD DVD BOX UPGRADE HERE ---
+  {
+    key: "dvdbox",
+    title: "DVD Box",
+    icon: "💿",
+    description: "Adds a bouncing DVD! Each purchase = 1 more, up to 30.",
+    initialCost: 44,
+    costFn: (count) => Math.floor(44 * Math.pow(2.35, count)),
+    max: 30,
+    effect: null, // visual only, no stat change
+  },
+  // ---
   {
     key: "emoji",
     title: "Brain Emoji",
@@ -270,6 +282,190 @@ function App() {
     upg => upgradeState[upg.key] && upgradeState[upg.key].unlocked
   );
 
+  // ---- Bouncing DVD Logic ----
+
+  // Helper: returns N random directions (unit vectors) for DVDs
+  function getInitialDVDs(count, boxW, boxH, size=44) {
+    // center spawn, each DVD with unique random angle
+    let arr = [];
+    for (let i = 0; i < count; ++i) {
+      // random angle/direction
+      const angle = Math.random() * 2 * Math.PI;
+      const dx = Math.cos(angle);
+      const dy = Math.sin(angle);
+      // position random (avoid edges), prevent exact overlap
+      const x = (boxW/2) + Math.cos(angle) * (boxW/5) + (Math.random() * 12 - 6);
+      const y = (boxH/2) + Math.sin(angle) * (boxH/5) + (Math.random() * 12 - 6);
+      arr.push({
+        x, y,
+        dx,
+        dy,
+        speed: 1.15 + Math.random()*0.65, // ~1-1.8 px/tick
+        color: "#4431e6", // or add color per DVD, e.g., null for emoji
+        id: i + "-" + String(Math.round(Math.random()*99999)),
+        icon: "💿",
+      });
+    }
+    return arr;
+  }
+
+  // "Bouncing DVDs" area is present only if at least 1 DVD box purchased and after activated
+  const dvdCount = activated ? (upgradeState.dvdbox?.count || 0) : 0;
+  // Main DVD Bounce React state: array of dvd objects (position, direction etc)
+  const [dvdBounces, setDvds] = useState([]);
+  // State for boundary size (needed for boundary collisions)
+  const [dvdBoxSize, setDvdBoxSize] = useState({w: 320, h: 110});
+  // Ref to bouncing area, so we can resize/reposition on window size change
+  const dvdBoxRef = React.useRef(null);
+
+  // When DVD count changes, add extra DVD(s) if needed
+  useEffect(() => {
+    if (!activated || dvdCount < 1) {
+      setDvds([]);
+      return;
+    }
+    setDvds((prev) => {
+      // If more needed, add them randomly (preserve others)
+      if (prev.length < dvdCount) {
+        // Insert new DVDs
+        const newOnes = getInitialDVDs(
+          dvdCount - prev.length,
+          dvdBoxSize.w,
+          dvdBoxSize.h
+        );
+        return [...prev, ...newOnes];
+      }
+      // If less, trim (should not happen except on test)
+      if (prev.length > dvdCount) {
+        return prev.slice(0, dvdCount);
+      }
+      return prev;
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dvdCount, activated, dvdBoxSize.w, dvdBoxSize.h]);
+
+  // Responsive: update box size on window resize
+  useEffect(() => {
+    function handleResize() {
+      // Use boundary box
+      if (dvdBoxRef.current) {
+        const rect = dvdBoxRef.current.getBoundingClientRect();
+        setDvdBoxSize({ w: rect.width, h: rect.height });
+      }
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Animation: move every DVD every N ms and handle bounces
+  useEffect(() => {
+    if (!activated || !dvdBounces.length) return;
+    let stopped = false;
+    // Each DVD: has x, y, dx, dy, speed
+    function moveStep() {
+      setDvds(prev => {
+        return prev.map(dvd => {
+          let {x, y, dx, dy, speed} = dvd;
+          // Move (speed px)
+          let nx = x + dx * speed;
+          let ny = y + dy * speed;
+          let ndx = dx, ndy = dy;
+          const S = 43; // DVD size
+          // Bounce X
+          if (nx < 0) { nx = 0; ndx = -dx; }
+          if (nx > dvdBoxSize.w - S) { nx = dvdBoxSize.w - S; ndx = -dx; }
+          // Bounce Y
+          if (ny < 0) { ny = 0; ndy = -dy; }
+          if (ny > dvdBoxSize.h - S) { ny = dvdBoxSize.h - S; ndy = -dy; }
+          // (In theory this prevents stuck, if edge exactly, add jitter)
+          if (nx === 0 || nx === dvdBoxSize.w - S) {
+            ndx += (Math.random()-0.5) * 0.15;
+          }
+          if (ny === 0 || ny === dvdBoxSize.h - S) {
+            ndy += (Math.random()-0.5) * 0.15;
+          }
+          // Normalise
+          let mag = Math.sqrt(ndx*ndx + ndy*ndy);
+          if (mag < 0.2) { ndx = 1; ndy = 0.6; mag = Math.sqrt(ndx*ndx + ndy*ndy);}
+          ndx /= mag; ndy /= mag;
+          return { ...dvd, x: nx, y: ny, dx: ndx, dy: ndy };
+        });
+      });
+      if (!stopped) requestAnimationFrame(moveStep);
+    }
+    requestAnimationFrame(moveStep);
+
+    return () => { stopped = true; };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activated, dvdBounces.length, dvdBoxSize.w, dvdBoxSize.h]);
+
+  // ---- DVD Bounce Component ----
+  function DVDBounceArea() {
+    // Only show if there are any DVDs currently
+    if (!activated || dvdCount < 1) return null;
+    return (
+      <div
+        className="dvd-bounce-area"
+        ref={dvdBoxRef}
+        style={{
+          width: "100%",
+          maxWidth: 320,
+          minHeight: 110,
+          height: 110,
+          position: "relative",
+          marginBottom: 22,
+          marginTop: 4,
+          background: "#fafafc",
+          border: "1.7px solid #bbb",
+          borderRadius: 12,
+          boxShadow: "0 2px 9px #eaeaea99, 0 1px 4px #eee6",
+          overflow: "hidden",
+          transition: "border 0.27s, box-shadow 0.22s"
+        }}
+        aria-label={`Bouncing DVD Area with ${dvdCount} DVD${dvdCount>1?'s':''}`}
+      >
+        {/* Show live count label */}
+        <div style={{
+          position: "absolute",
+          top: 5, left: 11, fontSize: 13.6, fontWeight: 500, color: "#4431e6bb",
+          textShadow: "0 1px 0 #fff, 0 1.5px 5px #8878c477"
+        }}>
+          {dvdCount} DVD{dvdCount > 1 ? "s" : ""}
+        </div>
+        {/* Each DVD icon (absolutely positioned) */}
+        {dvdBounces.map((dvd, i) => (
+          <span
+            key={dvd.id || i}
+            className="bouncing-dvd"
+            style={{
+              left: dvd.x,
+              top: dvd.y,
+              position: "absolute",
+              width: 43, height: 43,
+              fontSize: 33,
+              cursor: "pointer",
+              userSelect: "none",
+              textShadow: "0 0 4px #eee,0 1.5px 12px #bbb2",
+              filter:
+                "drop-shadow(0 0 4px #7755bb77)" +
+                (i % 7 === 0 ? " hue-rotate(85deg)" : "") +
+                (i % 7 === 1 ? " hue-rotate(-55deg)" : "") +
+                (i % 7 === 2 ? " saturate(1.6)" : ""),
+              animation: (i % 3 === 0 ? "spinBounce 2.7s linear infinite" :
+                          i % 3 === 1 ? "spinBounce 3.7s linear infinite reverse" :
+                          "spinBounce 3.1s linear infinite") // Add subtle rotation
+            }}
+            aria-label="Bouncing DVD"
+            title="DVD"
+          >
+            {dvd.icon}
+          </span>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className="dopamine-simple-root">
       {/* Top minimalist status bar */}
@@ -279,6 +475,8 @@ function App() {
         </span>
       </div>
       <div className="dopamine-content-wrapper">
+        {/* ---- BOUNCING DVD EFFECT AREA ---- */}
+        <DVDBounceArea/>
         {/* Main central column: button, stats, upgrades */}
         <main className="dopamine-center-main">
           {!activated ? (

@@ -356,3 +356,54 @@ body,
   .dopamine-upgrade-box { width: 33px; height: 33px; }
 }
 
+/* === Bouncing DVD Area === */
+.dvd-bounce-area {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  min-height: 110px;
+  height: 110px;
+  margin: 0 auto 22px auto;
+  background: #fafafc;
+  border: 1.7px solid #bbb;
+  border-radius: 12px;
+  box-shadow: 0 2px 9px #eaeaea99, 0 1px 4px #eee6;
+  overflow: hidden;
+  user-select: none;
+}
+
+.bouncing-dvd {
+  position: absolute;
+  width: 43px;
+  height: 43px;
+  font-size: 33px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Custom shadow for fun */
+  color: #4431e6;
+  transition: filter 0.22s;
+  pointer-events: auto;
+  border-radius: 50%;
+}
+
+@media (max-width: 430px) {
+  .dvd-bounce-area {
+    max-width: 99vw;
+    min-width: 180px;
+    height: 77px;
+    min-height: 77px;
+  }
+  .bouncing-dvd {
+    width: 31px;
+    height: 31px;
+    font-size: 21px;
+  }
+}
+
+/* Subtle spin on DVD icon for effect */
+@keyframes spinBounce {
+  0% { transform: rotate(0deg) scale(1.0);}
+  50% { transform: rotate(179deg) scale(1.12);}
+  100% { transform: rotate(360deg) scale(1.0);}
+}
