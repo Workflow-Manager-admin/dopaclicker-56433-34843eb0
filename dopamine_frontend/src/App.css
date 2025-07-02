@@ -99,6 +99,16 @@ body,
   border-color: #999;
 }
 
+/* Fancy Rectangle effect (applied when upgrade purchased) */
+.dopamine-cta-btn-fancy {
+  border-width: 2.5px !important;
+  background: linear-gradient(99deg,#fff 66%,#f5e7e7 100%) !important;
+  box-shadow: 0 5px 16px #c6b3ee22, 0 0px 44px #ece1ff39;
+  color: #9b10ba;
+  letter-spacing: 0.02em;
+  transition: box-shadow .19s, border .16s;
+}
+
 .dopamine-preloader {
   margin-top: 40px;
   font-size: 20px;
@@ -163,6 +173,131 @@ body,
   border: 2.1px solid #fff;
   box-shadow: 0 0 0 1.5px #fff8;
   pointer-events: none;
+}
+
+/* -- Modular Upgrades Card UI -- */
+.dopamine-upgrades-cards-col {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 22px;
+  gap: 17px;
+  width: 100%;
+  max-width: 345px;
+}
+.dopamine-mod-upgrade-card {
+  background: #fff;
+  border: 1.5px solid var(--neutral-border);
+  border-radius: 7px;
+  box-shadow: 0 4px 17px #bbb2, 0 1px 6px #f0f5;
+  padding: 14px 18px 13px 18px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  min-height: 74px;
+  transition: border .13s, box-shadow .17s;
+  position: relative;
+}
+.dopamine-upgrade-card-shake {
+  animation: shakeupg 0.35s cubic-bezier(.4,1,.65,.8);
+  border-color: var(--notif-red);
+}
+@keyframes shakeupg {
+  10% { transform: translate(-4px,0); }
+  20% { transform: translate(3px,0); }
+  45% { transform: translate(-2px,0);}
+  80% { transform: translate(2px,0);}
+  100% { transform: translate(0,0);}
+}
+.dopamine-upgrade-card-succ {
+  border-color: #3beb68 !important;
+  box-shadow: 0 0 9px #90efa1c7;
+}
+.dopamine-upgrade-card-maxed {
+  opacity: 0.75 !important;
+  border-style: dashed;
+}
+
+.dopamine-mod-upgrade-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0;
+  margin-top: -3px;
+}
+.dopamine-mod-upgrade-title {
+  font-size: 17.5px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: .01em;
+}
+.dopamine-mod-upgrade-desc {
+  font-size: 13.7px;
+  color: #5d5555;
+  margin-bottom: 5px;
+  line-height: 1.31;
+}
+.dopamine-mod-upgrade-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 1px;
+}
+
+.dopamine-mod-upgrade-count {
+  font-weight: 500;
+  color: #3e3e3e;
+  letter-spacing: .01em;
+}
+.dopamine-mod-upgrade-cost {
+  font-weight: 400;
+  color: var(--subtle-gray);
+}
+
+.dopamine-mod-upgrade-buy-btn {
+  background: #fffefb;
+  border: 1.2px solid var(--button-border);
+  border-radius: 6px;
+  box-shadow: 0 1.5px 7px #e3e1e1ad;
+  padding: 8px 21px;
+  margin-top: 5px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #131211;
+  letter-spacing: 0.01em;
+  outline: none;
+  cursor: pointer;
+  transition: background .12s, border .13s, color .1s, filter .10s;
+}
+.dopamine-mod-upgrade-buy-btn:active,
+.dopamine-mod-upgrade-buy-btn:focus {
+  filter: brightness(98%);
+  border-color: #a5a5a5;
+}
+.dopamine-mod-upgrade-buy-btn:hover:enabled {
+  background: #f8f6ff;
+  border-color: #888;
+}
+.dopamine-mod-upgrade-buy-btn:disabled,
+.dopamine-upgrade-card-maxed .dopamine-mod-upgrade-buy-btn {
+  background: #f0f0f2;
+  color: #aaa !important;
+  border-color: #e2e2e2 !important;
+  cursor: not-allowed;
+}
+.dopamine-buy-err {
+  font-size: 12.6px;
+  color: var(--notif-red);
+  font-weight: 500;
+  margin-top: 2px;
+  letter-spacing: .01em;
+  min-height: 17px;
+  text-align: right;
 }
 
 /* Hide upgrades row if none unlocked */
