@@ -8,6 +8,23 @@
   --notif-red: #ef4444;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 body,
 .dopamine-simple-root {
   background: var(--bg-canvas);
@@ -18,12 +35,46 @@ body,
   color: var(--brand-black);
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 /* Hide everything but main area for minimalist opening: */
 .dopamine-simple-root.minimalist-mode .dopamine-statusbar,
 .dopamine-simple-root.minimalist-mode .dopamine-upgrades-cards-col,
 .dopamine-simple-root.minimalist-mode .dvd-bounce-area,
 .dopamine-simple-root.minimalist-mode .dopamine-preloader {
   display: none !important;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 .dopamine-simple-root.minimalist-mode .dopamine-center-main.only-button-main {
@@ -35,14 +86,65 @@ body,
   border-radius: 12px;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 /* Fade-in button animation */
 .fade-in-btn {
   opacity: 0;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 .fade-in-btn.visible {
   opacity: 1;
   transition: opacity 2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Hide stats initially, fade in when needed */
@@ -53,12 +155,46 @@ body,
   margin-top: -6px;
   transition: opacity 0.26s, height 0.3s, margin-top 0.2s;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-stats-stack.stats-visible {
   opacity: 1;
   pointer-events: auto;
   height: auto;
   margin-top: 0;
   transition: opacity 0.56s cubic-bezier(.27,.97,.45,1.01), height 0.25s, margin-top 0.16s;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Top status bar */
@@ -72,6 +208,23 @@ body,
   justify-content: flex-start;
   align-items: center;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-statusbar-text {
   color: var(--brand-black);
   font-size: 14px;
@@ -79,6 +232,23 @@ body,
   margin-left: 38px;
   letter-spacing: .01em;
   opacity: 0.89;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Main flex horizontal layout */
@@ -91,6 +261,23 @@ body,
   width: 100%;
   max-width: none;
   margin: 0 auto;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Left logo column and DVD logos removed for a pure centered layout */
@@ -110,6 +297,23 @@ body,
   border-radius: 14px;
   box-shadow: 0 0 12px #8881;
   min-height: 390px;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Click me main CTA button */
@@ -132,14 +336,65 @@ body,
   cursor: pointer;
   transition: background .16s, border .16s;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-cta-btn:active,
 .dopamine-cta-btn:focus {
   filter: brightness(97%);
   border-color: #999;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-cta-btn:hover {
   background: #fafafa;
   border-color: #999;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Fancy Rectangle effect (applied when upgrade purchased) */
@@ -152,12 +407,46 @@ body,
   transition: box-shadow .19s, border .16s;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 .dopamine-preloader {
   margin-top: 40px;
   font-size: 20px;
   color: var(--subtle-gray);
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-weight: 400;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Stats */
@@ -169,15 +458,66 @@ body,
   margin-bottom: 24px;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 .dopamine-mainstat {
   font-size: 20px;
   font-weight: 700;
   color: #000;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-substat {
   font-size: 15px;
   font-weight: 400;
   color: var(--subtle-gray);
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Upgrades row & boxes */
@@ -188,6 +528,23 @@ body,
   justify-content: center;
   min-height: 53px;
   margin-top: 0;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 .dopamine-upgrade-box {
   width: 48px;
@@ -201,9 +558,43 @@ body,
   position: relative;
   box-shadow: 0 2px 8px #f2f2f2a1;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-upgrade-icon {
   font-size: 26px;
   user-select: none;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 .dopamine-upgrade-badge {
   position: absolute;
@@ -218,6 +609,23 @@ body,
   pointer-events: none;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 /* -- Modular Upgrades Card UI -- */
 .dopamine-upgrades-cards-col {
   display: flex;
@@ -228,6 +636,23 @@ body,
   gap: 17px;
   width: 100%;
   max-width: 345px;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 .dopamine-mod-upgrade-card {
   background: #fff;
@@ -244,24 +669,194 @@ body,
   transition: border .13s, box-shadow .17s;
   position: relative;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-upgrade-card-shake {
   animation: shakeupg 0.35s cubic-bezier(.4,1,.65,.8);
   border-color: var(--notif-red);
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 @keyframes shakeupg {
   10% { transform: translate(-4px,0); }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   20% { transform: translate(3px,0); }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   45% { transform: translate(-2px,0);}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   80% { transform: translate(2px,0);}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   100% { transform: translate(0,0);}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 .dopamine-upgrade-card-succ {
   border-color: #3beb68 !important;
   box-shadow: 0 0 9px #90efa1c7;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-upgrade-card-maxed {
   opacity: 0.75 !important;
   border-style: dashed;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 .dopamine-mod-upgrade-header {
@@ -271,17 +866,68 @@ body,
   margin-bottom: 0;
   margin-top: -3px;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-mod-upgrade-title {
   font-size: 17.5px;
   font-weight: 600;
   color: #111;
   letter-spacing: .01em;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-mod-upgrade-desc {
   font-size: 13.7px;
   color: #5d5555;
   margin-bottom: 5px;
   line-height: 1.31;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 .dopamine-mod-upgrade-details {
   display: flex;
@@ -291,14 +937,65 @@ body,
   margin-bottom: 1px;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 .dopamine-mod-upgrade-count {
   font-weight: 500;
   color: #3e3e3e;
   letter-spacing: .01em;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-mod-upgrade-cost {
   font-weight: 400;
   color: var(--subtle-gray);
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 .dopamine-mod-upgrade-buy-btn {
@@ -317,14 +1014,65 @@ body,
   cursor: pointer;
   transition: background .12s, border .13s, color .1s, filter .10s;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-mod-upgrade-buy-btn:active,
 .dopamine-mod-upgrade-buy-btn:focus {
   filter: brightness(98%);
   border-color: #a5a5a5;
 }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
 .dopamine-mod-upgrade-buy-btn:hover:enabled {
   background: #f8f6ff;
   border-color: #888;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 .dopamine-mod-upgrade-buy-btn:disabled,
 .dopamine-upgrade-card-maxed .dopamine-mod-upgrade-buy-btn {
@@ -332,6 +1080,23 @@ body,
   color: #aaa !important;
   border-color: #e2e2e2 !important;
   cursor: not-allowed;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 .dopamine-buy-err {
   font-size: 12.6px;
@@ -343,9 +1108,43 @@ body,
   text-align: right;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 /* Hide upgrades row if none unlocked */
 .dopamine-upgrades-row:empty {
   display: none !important;
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Responsive tweaks */
@@ -358,6 +1157,23 @@ body,
     margin-top: 34px;
     margin-bottom: 12px;
   }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   .dopamine-logo-col {
     flex-direction: row;
     min-width: 0;
@@ -365,18 +1181,86 @@ body,
     width: 100vw;
     justify-content: center;
   }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   .dopamine-dvd-logo {
     width: 80px;
     height: 80px;
     font-size: 54px;
     margin-right: 18px;
   }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   .dopamine-center-main {
     padding: 19px 5vw 20px 5vw;
     min-width: 82vw;
     max-width: 97vw;
     min-height: 300px;
   }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 @media (max-width:430px) {
@@ -387,6 +1271,23 @@ body,
     min-width: unset;
     font-size: 14px;
   }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   .dopamine-cta-btn {
     font-size: 15px;
     min-width: 116px;
@@ -394,9 +1295,94 @@ body,
     padding: 6px 13px;
     margin-bottom: 18px;
   }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   .dopamine-mainstat { font-size: 15.5px; }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   .dopamine-substat { font-size: 12.5px; }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   .dopamine-upgrade-box { width: 33px; height: 33px; }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* === Bouncing DVD Area === */
@@ -415,6 +1401,23 @@ body,
   user-select: none;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 .bouncing-dvd {
   position: absolute;
   width: 43px;
@@ -430,6 +1433,23 @@ body,
   border-radius: 50%;
 }
 
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+
 @media (max-width: 430px) {
   .dvd-bounce-area {
     max-width: 99vw;
@@ -437,16 +1457,135 @@ body,
     height: 77px;
     min-height: 77px;
   }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   .bouncing-dvd {
     width: 31px;
     height: 31px;
     font-size: 21px;
   }
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
 
 /* Subtle spin on DVD icon for effect */
 @keyframes spinBounce {
   0% { transform: rotate(0deg) scale(1.0);}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   50% { transform: rotate(179deg) scale(1.12);}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
   100% { transform: rotate(360deg) scale(1.0);}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
+}
+}
+
+/* Achievement toast popup overrides */
+.dopamine-upgrade-card-succ {
+  background: #fffde8 !important;
+  border-color: #3beb68 !important;
+  z-index: 100;
+}
+
+.dopamine-meme-panel {
+  overflow-y: auto;
+  max-height: 91vh;
+}
+
+.dopamine-meme-panel img {
+  border-radius: 10px;
+  box-shadow: 0 2px 12px #cfcff196;
 }
