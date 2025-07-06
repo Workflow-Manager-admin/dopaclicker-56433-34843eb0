@@ -1,0 +1,16 @@
+{
+  "short_name": "DopaClicker",
+  "name": "DopaClicker - Idle Dopamine Game",
+  "description": "A playful idle dopamine clicker game inspired by neal.fun. Enjoy interactive visual and audio stimulation, upgrades, automation, and achievements.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}
